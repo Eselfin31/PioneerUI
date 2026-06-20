@@ -6,7 +6,7 @@ import { describe, expect, it } from "vitest"
 import { runCli } from "../src/index.js"
 
 describe("Pioneer CLI configured registry", () => {
-  it("writes the public raw GitHub registry by default", async () => {
+  it("writes the public Pages registry by default", async () => {
     // Given: a new project with no explicit registry flag.
     const projectRoot = await mkdtemp(join(tmpdir(), "pioneer-cli-default-registry-"))
 
@@ -17,9 +17,9 @@ describe("Pioneer CLI configured registry", () => {
       stdout: () => undefined,
     })
 
-    // Then: add/diff/update will use the live GitHub-hosted registry by default.
+    // Then: add/diff/update will use the live GitHub Pages registry by default.
     await expect(readFile(join(projectRoot, "pioneer.json"), "utf8")).resolves.toContain(
-      "https://raw.githubusercontent.com/Eselfin31/PioneerUI/main/apps/docs/public/registry/index.json",
+      "https://Eselfin31.github.io/PioneerUI/registry/index.json",
     )
   })
 

@@ -37,7 +37,7 @@ npx pnpm@11.8.0 registry:generate
 Once hosted, consumers can install from the generated HTTP index:
 
 ```bash
-pioneer add dashboard-shell --registry https://raw.githubusercontent.com/Eselfin31/PioneerUI/main/apps/docs/public/registry/index.json --write
+pioneer add dashboard-shell --registry https://Eselfin31.github.io/PioneerUI/registry/index.json --write
 ```
 
 For the normal project workflow, initialize once with the hosted registry URL.
@@ -45,26 +45,28 @@ The CLI stores that URL in `pioneer.json`, and later `add`, `diff`, and
 `update` commands use it automatically unless `--registry` is passed again:
 
 ```bash
-npx pioneer-ui@latest init --write --registry https://raw.githubusercontent.com/Eselfin31/PioneerUI/main/apps/docs/public/registry/index.json
+npx pioneer-ui@latest init --write --registry https://Eselfin31.github.io/PioneerUI/registry/index.json
 npx pioneer-ui@latest add dashboard-shell settings-page --write
 npx pioneer-ui@latest diff dashboard-shell
 ```
 
 ## Docs Deployment
 
-The Pages workflow builds the full workspace, generates
-`apps/docs/public/registry/index.json`, copies registry source templates into
-the docs public directory, and deploys `apps/docs/dist` to GitHub Pages.
+The public docs and registry are currently served from the `gh-pages` branch at
+`https://Eselfin31.github.io/PioneerUI/`. The branch contains the generated
+`apps/docs/dist` output, including `registry/index.json`.
 
-Set the repository Pages source to **GitHub Actions** before the first public
-deploy. The workflow uses GitHub's Pages metadata to set the Vite base path, so
-project Pages URLs such as `https://OWNER.github.io/REPO/` work without a
-manual config edit.
+Build the docs for the project Pages path before refreshing that branch:
 
-For a local project-path build, set the same base variable:
+```powershell
+$env:PIONEER_DOCS_BASE = "/PioneerUI/"
+npx pnpm@11.8.0 build
+```
+
+On POSIX shells:
 
 ```bash
-PIONEER_DOCS_BASE=/PioneerUI/ npx pnpm@11.8.0 --filter @pioneer-ui/docs build
+PIONEER_DOCS_BASE=/PioneerUI/ npx pnpm@11.8.0 build
 ```
 
 ## Release Publishing
