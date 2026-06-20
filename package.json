@@ -18,6 +18,8 @@
     "check": "pnpm lint && pnpm typecheck && pnpm test",
     "lint": "biome check .",
     "registry:generate": "node packages/cli/dist/index.mjs registry build --out apps/docs/public/registry/index.json",
+    "release:dry-run": "pnpm -r publish --dry-run --no-git-checks",
+    "release:publish": "pnpm -r publish --provenance --no-git-checks",
     "test": "vitest run",
     "typecheck": "tsc --noEmit"
   },

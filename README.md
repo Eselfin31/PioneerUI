@@ -70,13 +70,30 @@ PIONEER_DOCS_BASE=/PioneerUI/ npx pnpm@11.8.0 --filter @pioneer-ui/docs build
 ## Release Publishing
 
 The release workflow publishes packages from `.github/workflows/release.yml`.
-Before the first npm release, configure trusted publishing on npm for each
+Before cutting a release, verify package contents and publish order with:
+
+```bash
+npx pnpm@11.8.0 release:dry-run
+```
+
+While package names are still unpublished, pnpm may print
+`No versions available` during the dry run. Treat the process exit code and the
+package list as the gate.
+
+For the first publish of a new npm package name, use an authenticated npm
+account with ownership of the target scope/name. The scoped packages publish as
+public packages through their manifest `publishConfig.access` settings.
+
+After the package names exist on npm, configure trusted publishing for each
 published package with:
 
 - owner: `Eselfin31`
 - repository: `PioneerUI`
 - workflow filename: `release.yml`
 - allowed action: `npm publish`
+
+Then publish future releases from GitHub by publishing a GitHub Release or
+running the Release workflow manually.
 
 The publishable package manifests include repository metadata for
 `https://github.com/Eselfin31/PioneerUI`.

@@ -25,8 +25,4 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - run: pnpm check
       - run: pnpm build
-      - run: pnpm --filter @pioneer-ui/shared publish --provenance --no-git-checks
-      - run: pnpm --filter @pioneer-ui/tokens publish --provenance --no-git-checks
-      - run: pnpm --filter @pioneer-ui/registry publish --provenance --no-git-checks
-      - run: pnpm --filter @pioneer-ui/installer publish --provenance --no-git-checks
-      - run: pnpm --filter pioneer-ui publish --provenance --no-git-checks
+      - run: pnpm release:publish

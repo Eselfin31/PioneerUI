@@ -1,6 +1,6 @@
-import { copyFile, mkdir, stat, writeFile } from "node:fs/promises"
+import { copyFile, mkdir, readFile, stat, writeFile } from "node:fs/promises"
 import { dirname, join, resolve } from "node:path"
-import { buildRegistryIndex, type RegistryIndex } from "@pioneer-ui/registry"
+import { buildRegistryIndex, type RegistryIndex, registryIndexSchema } from "@pioneer-ui/registry"
 import { optionValue } from "./args.js"
 import type { CliIo } from "./io.js"
 
@@ -24,17 +24,19 @@ export async function runRegistryCommand(args: readonly string[], io: CliIo): Pr
 
   const registryRoot = resolve(io.cwd, registrySource)
   const index = await buildRegistryIndex(resolve(registryRoot, "items"))
-  const payload = `${JSON.stringify(index, null, 2)}\n`
   if (outPath === null) {
+    const payload = `${JSON.stringify(index, null, 2)}\n`
     io.stdout(payload.trimEnd())
     return
   }
 
   const target = resolve(io.cwd, outPath)
+  const stableIndex = await preserveGeneratedAt(target, index)
+  const payload = `${JSON.stringify(stableIndex, null, 2)}\n`
   const publicRegistryRoot = dirname(target)
   await mkdir(dirname(target), { recursive: true })
   await writeFile(target, payload)
-  await copyRegistrySources(index, registryRoot, publicRegistryRoot)
+  await copyRegistrySources(stableIndex, registryRoot, publicRegistryRoot)
   io.stdout(`Wrote registry index to ${target}`)
 }
 
@@ -77,6 +79,48 @@ async function copyRegistrySources(
       await mkdir(dirname(target), { recursive: true })
       await copyFile(source, target)
     }
+  }
+}
+
+async function preserveGeneratedAt(
+  target: string,
+  nextIndex: RegistryIndex,
+): Promise<RegistryIndex> {
+  const existingIndex = await readExistingRegistryIndex(target)
+  if (existingIndex === null || !hasSameRegistryContent(existingIndex, nextIndex)) {
+    return nextIndex
+  }
+
+  return { ...nextIndex, generatedAt: existingIndex.generatedAt }
+}
+
+async function readExistingRegistryIndex(target: string): Promise<RegistryIndex | null> {
+  try {
+    return registryIndexSchema.parse(JSON.parse(await readFile(target, "utf8")))
+  } catch (error) {
+    if (isMissingFileError(error) || error instanceof SyntaxError || isZodError(error)) {
+      return null
+    }
+    throw error
+  }
+}
+
+function isMissingFileError(error: unknown): boolean {
+  return error instanceof Error && "code" in error && error.code === "ENOENT"
+}
+
+function isZodError(error: unknown): boolean {
+  return error instanceof Error && error.name === "ZodError"
+}
+
+function hasSameRegistryContent(left: RegistryIndex, right: RegistryIndex): boolean {
+  return JSON.stringify(registryContent(left)) === JSON.stringify(registryContent(right))
+}
+
+function registryContent(index: RegistryIndex): Pick<RegistryIndex, "items" | "schemaVersion"> {
+  return {
+    schemaVersion: index.schemaVersion,
+    items: index.items,
   }
 }
 
