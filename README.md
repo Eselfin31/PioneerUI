@@ -37,7 +37,7 @@ npx pnpm@11.8.0 registry:generate
 Once hosted, consumers can install from the generated HTTP index:
 
 ```bash
-pioneer add dashboard-shell --registry https://Eselfin31.github.io/PioneerUI/registry/index.json --write
+pioneer add dashboard-shell --registry https://raw.githubusercontent.com/Eselfin31/PioneerUI/main/apps/docs/public/registry/index.json --write
 ```
 
 For the normal project workflow, initialize once with the hosted registry URL.
@@ -45,7 +45,7 @@ The CLI stores that URL in `pioneer.json`, and later `add`, `diff`, and
 `update` commands use it automatically unless `--registry` is passed again:
 
 ```bash
-npx pioneer-ui@latest init --write --registry https://Eselfin31.github.io/PioneerUI/registry/index.json
+npx pioneer-ui@latest init --write --registry https://raw.githubusercontent.com/Eselfin31/PioneerUI/main/apps/docs/public/registry/index.json
 npx pioneer-ui@latest add dashboard-shell settings-page --write
 npx pioneer-ui@latest diff dashboard-shell
 ```
@@ -81,8 +81,12 @@ While package names are still unpublished, pnpm may print
 package list as the gate.
 
 For the first publish of a new npm package name, use an authenticated npm
-account with ownership of the target scope/name. The scoped packages publish as
-public packages through their manifest `publishConfig.access` settings.
+account with ownership of the target scope/name, including the `@pioneer-ui`
+npm organization scope. The scoped packages publish as public packages through
+their manifest `publishConfig.access` settings.
+Keep the first `pioneer-ui` CLI publish on `0.1.1` or later; npm registry
+history already contains an unpublished `pioneer-ui@0.1.0`, and npm does not
+allow reusing an already-published package/version pair.
 
 After the package names exist on npm, configure trusted publishing for each
 published package with:

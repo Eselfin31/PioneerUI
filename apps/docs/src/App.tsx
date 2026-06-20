@@ -22,7 +22,7 @@ const blocks = [
 ] as const
 
 const commands = [
-  "npx pioneer-ui@latest init --write --registry https://Eselfin31.github.io/PioneerUI/registry/index.json",
+  "npx pioneer-ui@latest init --write --registry https://raw.githubusercontent.com/Eselfin31/PioneerUI/main/apps/docs/public/registry/index.json",
   "npx pioneer-ui@latest add dashboard-shell settings-page --write",
   "npx pioneer-ui@latest diff dashboard-shell",
 ] as const

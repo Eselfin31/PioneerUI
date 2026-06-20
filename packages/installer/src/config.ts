@@ -22,7 +22,8 @@ export const defaultPioneerConfig: PioneerConfig = {
   framework: "react",
   styling: "tailwind",
   css: "src/styles.css",
-  registry: "https://Eselfin31.github.io/PioneerUI/registry/index.json",
+  registry:
+    "https://raw.githubusercontent.com/Eselfin31/PioneerUI/main/apps/docs/public/registry/index.json",
   aliases: {
     ui: "src/components/ui",
     components: "src/components",
