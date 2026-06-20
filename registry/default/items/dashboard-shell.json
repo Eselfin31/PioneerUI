@@ -1,0 +1,14 @@
+{
+  "name": "dashboard-shell",
+  "version": "0.1.0",
+  "kind": "block",
+  "title": "Dashboard Shell",
+  "description": "Flagship SaaS dashboard layout with sidebar, topbar actions, metrics, and readiness panel.",
+  "files": [{ "role": "block", "source": "blocks/dashboard-shell.tsx", "target": "src/components/blocks/dashboard-shell.tsx" }],
+  "dependencies": ["lucide-react@1.21.0"],
+  "devDependencies": [],
+  "requires": ["badge", "button", "card", "separator"],
+  "docs": { "route": "/docs/blocks/dashboard-shell", "examples": ["launch-operations"] },
+  "stability": "stable"
+}
+

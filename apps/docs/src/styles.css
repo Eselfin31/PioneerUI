@@ -1,0 +1,34 @@
+@import "tailwindcss";
+@source not "../public/registry";
+
+@theme {
+  --font-sans:
+    Geist, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "Geist Mono", "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+  --color-background: var(--surface-primary);
+  --color-foreground: var(--text-primary);
+  --radius-control: 0.375rem;
+  --radius-panel: 0.5rem;
+}
+
+:root {
+  color-scheme: light;
+  --surface-primary: #fbfcff;
+  --surface-secondary: #f4f7fb;
+  --surface-elevated: #ffffff;
+  --text-primary: #07111f;
+  --text-secondary: #536174;
+  --text-tertiary: #8491a5;
+  --border-default: #dbe3ef;
+  --border-subtle: #edf2f8;
+  --accent-primary: #4f46e5;
+  --accent-hover: #3730a3;
+  --accent-soft: #eef2ff;
+  --status-success: #168a4a;
+}
+
+body {
+  margin: 0;
+  background: var(--surface-primary);
+  font-family: var(--font-sans);
+}

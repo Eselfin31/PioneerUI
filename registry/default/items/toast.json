@@ -1,0 +1,14 @@
+{
+  "name": "toast",
+  "version": "0.1.0",
+  "kind": "primitive",
+  "title": "Toast",
+  "description": "Inline notification surface for app feedback.",
+  "files": [{ "role": "component", "source": "ui/toast.tsx", "target": "src/components/ui/toast.tsx" }],
+  "dependencies": [],
+  "devDependencies": [],
+  "requires": ["utils"],
+  "docs": { "route": "/docs/components/toast", "examples": ["success", "error"] },
+  "stability": "candidate"
+}
+

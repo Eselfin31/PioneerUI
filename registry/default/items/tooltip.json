@@ -1,0 +1,14 @@
+{
+  "name": "tooltip",
+  "version": "0.1.0",
+  "kind": "primitive",
+  "title": "Tooltip",
+  "description": "Accessible tooltip with restrained Pioneer surface.",
+  "files": [{ "role": "component", "source": "ui/tooltip.tsx", "target": "src/components/ui/tooltip.tsx" }],
+  "dependencies": ["@radix-ui/react-tooltip@1.2.10"],
+  "devDependencies": [],
+  "requires": ["utils"],
+  "docs": { "route": "/docs/components/tooltip", "examples": ["icon-tooltip"] },
+  "stability": "stable"
+}
+

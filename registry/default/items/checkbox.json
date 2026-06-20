@@ -1,0 +1,14 @@
+{
+  "name": "checkbox",
+  "version": "0.1.0",
+  "kind": "primitive",
+  "title": "Checkbox",
+  "description": "Accessible checkbox with Pioneer token states.",
+  "files": [{ "role": "component", "source": "ui/checkbox.tsx", "target": "src/components/ui/checkbox.tsx" }],
+  "dependencies": ["@radix-ui/react-checkbox@1.3.5", "lucide-react@1.21.0"],
+  "devDependencies": [],
+  "requires": ["utils"],
+  "docs": { "route": "/docs/components/checkbox", "examples": ["default", "checked"] },
+  "stability": "stable"
+}
+

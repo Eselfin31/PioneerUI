@@ -1,0 +1,14 @@
+{
+  "name": "notifications-page",
+  "version": "0.1.0",
+  "kind": "block",
+  "title": "Notifications Page",
+  "description": "Notification preference page for SaaS settings areas.",
+  "files": [{ "role": "block", "source": "blocks/notifications-page.tsx", "target": "src/components/blocks/notifications-page.tsx" }],
+  "dependencies": [],
+  "devDependencies": [],
+  "requires": ["card", "switch"],
+  "docs": { "route": "/docs/blocks/notifications-page", "examples": ["preferences"] },
+  "stability": "candidate"
+}
+

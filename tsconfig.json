@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": true
+  },
+  "include": [
+    "packages/*/src/**/*.ts",
+    "packages/*/test/**/*.ts",
+    "apps/docs/src/**/*.ts",
+    "apps/docs/src/**/*.tsx",
+    "examples/vite-react/src/**/*.ts",
+    "examples/vite-react/src/**/*.tsx",
+    "examples/next-app/app/**/*.ts",
+    "examples/next-app/app/**/*.tsx"
+  ]
+}

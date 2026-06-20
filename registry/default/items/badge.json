@@ -1,0 +1,14 @@
+{
+  "name": "badge",
+  "version": "0.1.0",
+  "kind": "primitive",
+  "title": "Badge",
+  "description": "Compact status and metadata badge.",
+  "files": [{ "role": "component", "source": "ui/badge.tsx", "target": "src/components/ui/badge.tsx" }],
+  "dependencies": [],
+  "devDependencies": [],
+  "requires": ["utils"],
+  "docs": { "route": "/docs/components/badge", "examples": ["status-tones"] },
+  "stability": "stable"
+}
+

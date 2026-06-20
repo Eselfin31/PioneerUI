@@ -1,0 +1,14 @@
+{
+  "name": "security-page",
+  "version": "0.1.0",
+  "kind": "block",
+  "title": "Security Page",
+  "description": "Security controls page with policy toggle and audit log action.",
+  "files": [{ "role": "block", "source": "blocks/security-page.tsx", "target": "src/components/blocks/security-page.tsx" }],
+  "dependencies": [],
+  "devDependencies": [],
+  "requires": ["badge", "button", "card", "switch"],
+  "docs": { "route": "/docs/blocks/security-page", "examples": ["controls"] },
+  "stability": "candidate"
+}
+

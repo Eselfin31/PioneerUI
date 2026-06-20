@@ -1,0 +1,14 @@
+{
+  "name": "input",
+  "version": "0.1.0",
+  "kind": "primitive",
+  "title": "Input",
+  "description": "Text input styled with Pioneer UI tokens and accessible focus states.",
+  "files": [{ "role": "component", "source": "ui/input.tsx", "target": "src/components/ui/input.tsx" }],
+  "dependencies": [],
+  "devDependencies": [],
+  "requires": ["utils"],
+  "docs": { "route": "/docs/components/input", "examples": ["default", "disabled", "invalid"] },
+  "stability": "stable"
+}
+

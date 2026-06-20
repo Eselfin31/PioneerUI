@@ -1,0 +1,14 @@
+{
+  "name": "billing-page",
+  "version": "0.1.0",
+  "kind": "block",
+  "title": "Billing Page",
+  "description": "Billing summary with plan state, payment method, and invoice list.",
+  "files": [{ "role": "block", "source": "blocks/billing-page.tsx", "target": "src/components/blocks/billing-page.tsx" }],
+  "dependencies": ["lucide-react@1.21.0"],
+  "devDependencies": [],
+  "requires": ["badge", "button", "card"],
+  "docs": { "route": "/docs/blocks/billing-page", "examples": ["subscription"] },
+  "stability": "stable"
+}
+

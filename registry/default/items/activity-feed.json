@@ -1,0 +1,14 @@
+{
+  "name": "activity-feed",
+  "version": "0.1.0",
+  "kind": "block",
+  "title": "Activity Feed",
+  "description": "Compact event feed for dashboards and audit pages.",
+  "files": [{ "role": "block", "source": "blocks/activity-feed.tsx", "target": "src/components/blocks/activity-feed.tsx" }],
+  "dependencies": [],
+  "devDependencies": [],
+  "requires": ["badge", "card"],
+  "docs": { "route": "/docs/blocks/activity-feed", "examples": ["release-activity"] },
+  "stability": "stable"
+}
+

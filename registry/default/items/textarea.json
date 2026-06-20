@@ -1,0 +1,14 @@
+{
+  "name": "textarea",
+  "version": "0.1.0",
+  "kind": "primitive",
+  "title": "Textarea",
+  "description": "Multiline field with matching form rhythm.",
+  "files": [{ "role": "component", "source": "ui/textarea.tsx", "target": "src/components/ui/textarea.tsx" }],
+  "dependencies": [],
+  "devDependencies": [],
+  "requires": ["utils"],
+  "docs": { "route": "/docs/components/textarea", "examples": ["default", "helper"] },
+  "stability": "stable"
+}
+

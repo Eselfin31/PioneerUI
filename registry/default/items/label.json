@@ -1,0 +1,14 @@
+{
+  "name": "label",
+  "version": "0.1.0",
+  "kind": "primitive",
+  "title": "Label",
+  "description": "Accessible form label primitive.",
+  "files": [{ "role": "component", "source": "ui/label.tsx", "target": "src/components/ui/label.tsx" }],
+  "dependencies": ["@radix-ui/react-label@2.1.10"],
+  "devDependencies": [],
+  "requires": ["utils"],
+  "docs": { "route": "/docs/components/label", "examples": ["input-label"] },
+  "stability": "stable"
+}
+

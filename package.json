@@ -1,0 +1,34 @@
+{
+  "name": "pioneer-ui-workspace",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "Apache-2.0",
+  "homepage": "https://Eselfin31.github.io/PioneerUI/",
+  "bugs": {
+    "url": "https://github.com/Eselfin31/PioneerUI/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eselfin31/PioneerUI.git"
+  },
+  "packageManager": "pnpm@11.8.0",
+  "scripts": {
+    "build": "pnpm --filter @pioneer-ui/shared build && pnpm --filter @pioneer-ui/tokens build && pnpm --filter @pioneer-ui/registry build && pnpm --filter @pioneer-ui/installer build && pnpm --filter pioneer-ui build && pnpm registry:generate && pnpm --filter @pioneer-ui/docs build && pnpm --filter @pioneer-ui/vite-react-example build && pnpm --filter @pioneer-ui/next-app-example build",
+    "check": "pnpm lint && pnpm typecheck && pnpm test",
+    "lint": "biome check .",
+    "registry:generate": "node packages/cli/dist/index.mjs registry build --out apps/docs/public/registry/index.json",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.0",
+    "@types/node": "^24.10.1",
+    "@types/react": "19.2.17",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "6.0.2",
+    "typescript": "6.0.3",
+    "vite": "8.0.16",
+    "vitest": "4.1.9"
+  }
+}

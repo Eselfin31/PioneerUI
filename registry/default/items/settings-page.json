@@ -1,0 +1,14 @@
+{
+  "name": "settings-page",
+  "version": "0.1.0",
+  "kind": "block",
+  "title": "Settings Page",
+  "description": "Workspace settings form with switch controls and save action.",
+  "files": [{ "role": "block", "source": "blocks/settings-page.tsx", "target": "src/components/blocks/settings-page.tsx" }],
+  "dependencies": [],
+  "devDependencies": [],
+  "requires": ["button", "card", "input", "label", "switch"],
+  "docs": { "route": "/docs/blocks/settings-page", "examples": ["workspace-settings"] },
+  "stability": "stable"
+}
+

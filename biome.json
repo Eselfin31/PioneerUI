@@ -1,0 +1,75 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.5.0/schema.json",
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": "on"
+      }
+    }
+  },
+  "files": {
+    "includes": [
+      "**",
+      "!**/node_modules",
+      "!**/dist",
+      "!**/build",
+      "!**/.next",
+      "!**/.vite",
+      "!**/.omx",
+      "!**/coverage",
+      "!output",
+      "!**/next-env.d.ts",
+      "!apps/docs/public/registry",
+      "!registry/default/**/*"
+    ]
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 100
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "double",
+      "semicolons": "asNeeded"
+    }
+  },
+  "css": {
+    "parser": {
+      "tailwindDirectives": true
+    }
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "preset": "recommended",
+      "correctness": {
+        "noUnusedImports": "error",
+        "noUnusedVariables": "error"
+      },
+      "suspicious": {
+        "noExplicitAny": "error",
+        "noFallthroughSwitchClause": "error"
+      },
+      "style": {
+        "noDefaultExport": "error",
+        "noNonNullAssertion": "error",
+        "noParameterAssign": "error",
+        "useImportType": "error"
+      }
+    }
+  },
+  "overrides": [
+    {
+      "includes": ["**/*.config.ts", "examples/next-app/app/**/*.tsx"],
+      "linter": {
+        "rules": {
+          "style": {
+            "noDefaultExport": "off"
+          }
+        }
+      }
+    }
+  ]
+}

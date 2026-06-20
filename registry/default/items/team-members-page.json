@@ -1,0 +1,14 @@
+{
+  "name": "team-members-page",
+  "version": "0.1.0",
+  "kind": "block",
+  "title": "Team Members Page",
+  "description": "Team access list with member roles, avatars, and invite action.",
+  "files": [{ "role": "block", "source": "blocks/team-members-page.tsx", "target": "src/components/blocks/team-members-page.tsx" }],
+  "dependencies": [],
+  "devDependencies": [],
+  "requires": ["avatar", "badge", "button", "card"],
+  "docs": { "route": "/docs/blocks/team-members-page", "examples": ["access-list"] },
+  "stability": "stable"
+}
+

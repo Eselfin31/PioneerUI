@@ -1,0 +1,14 @@
+{
+  "name": "onboarding-checklist",
+  "version": "0.1.0",
+  "kind": "block",
+  "title": "Onboarding Checklist",
+  "description": "Setup checklist block for product onboarding flows.",
+  "files": [{ "role": "block", "source": "blocks/onboarding-checklist.tsx", "target": "src/components/blocks/onboarding-checklist.tsx" }],
+  "dependencies": [],
+  "devDependencies": [],
+  "requires": ["badge", "button", "card", "checkbox"],
+  "docs": { "route": "/docs/blocks/onboarding-checklist", "examples": ["setup"] },
+  "stability": "stable"
+}
+

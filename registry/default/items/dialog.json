@@ -1,0 +1,14 @@
+{
+  "name": "dialog",
+  "version": "0.1.0",
+  "kind": "primitive",
+  "title": "Dialog",
+  "description": "Accessible modal dialog with overlay and close control.",
+  "files": [{ "role": "component", "source": "ui/dialog.tsx", "target": "src/components/ui/dialog.tsx" }],
+  "dependencies": ["@radix-ui/react-dialog@1.1.17", "lucide-react@1.21.0"],
+  "devDependencies": [],
+  "requires": ["button", "utils"],
+  "docs": { "route": "/docs/components/dialog", "examples": ["confirmation", "form"] },
+  "stability": "candidate"
+}
+

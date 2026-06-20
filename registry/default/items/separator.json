@@ -1,0 +1,14 @@
+{
+  "name": "separator",
+  "version": "0.1.0",
+  "kind": "primitive",
+  "title": "Separator",
+  "description": "Subtle visual separator.",
+  "files": [{ "role": "component", "source": "ui/separator.tsx", "target": "src/components/ui/separator.tsx" }],
+  "dependencies": [],
+  "devDependencies": [],
+  "requires": ["utils"],
+  "docs": { "route": "/docs/components/separator", "examples": ["section-divider"] },
+  "stability": "stable"
+}
+

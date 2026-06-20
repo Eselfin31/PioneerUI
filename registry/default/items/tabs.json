@@ -1,0 +1,14 @@
+{
+  "name": "tabs",
+  "version": "0.1.0",
+  "kind": "primitive",
+  "title": "Tabs",
+  "description": "Segmented content navigation.",
+  "files": [{ "role": "component", "source": "ui/tabs.tsx", "target": "src/components/ui/tabs.tsx" }],
+  "dependencies": ["@radix-ui/react-tabs@1.1.15"],
+  "devDependencies": [],
+  "requires": ["utils"],
+  "docs": { "route": "/docs/components/tabs", "examples": ["settings-tabs"] },
+  "stability": "stable"
+}
+

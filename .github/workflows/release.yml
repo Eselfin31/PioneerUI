@@ -1,0 +1,32 @@
+name: Release
+
+on:
+  release:
+    types:
+      - published
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          registry-url: https://registry.npmjs.org
+          cache: pnpm
+      - run: corepack enable
+      - run: corepack prepare pnpm@11.8.0 --activate
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm check
+      - run: pnpm build
+      - run: pnpm --filter @pioneer-ui/shared publish --provenance --no-git-checks
+      - run: pnpm --filter @pioneer-ui/tokens publish --provenance --no-git-checks
+      - run: pnpm --filter @pioneer-ui/registry publish --provenance --no-git-checks
+      - run: pnpm --filter @pioneer-ui/installer publish --provenance --no-git-checks
+      - run: pnpm --filter pioneer-ui publish --provenance --no-git-checks

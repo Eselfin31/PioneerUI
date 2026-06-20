@@ -1,0 +1,14 @@
+{
+  "name": "profile-page",
+  "version": "0.1.0",
+  "kind": "block",
+  "title": "Profile Page",
+  "description": "Profile editing surface with avatar, inputs, and account metadata.",
+  "files": [{ "role": "block", "source": "blocks/profile-page.tsx", "target": "src/components/blocks/profile-page.tsx" }],
+  "dependencies": [],
+  "devDependencies": [],
+  "requires": ["avatar", "button", "card", "input", "label"],
+  "docs": { "route": "/docs/blocks/profile-page", "examples": ["profile-form"] },
+  "stability": "stable"
+}
+

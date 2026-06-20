@@ -1,0 +1,14 @@
+{
+  "name": "app-error-state",
+  "version": "0.1.0",
+  "kind": "block",
+  "title": "App Error State",
+  "description": "Recoverable application error state with clear retry action.",
+  "files": [{ "role": "block", "source": "blocks/app-error-state.tsx", "target": "src/components/blocks/app-error-state.tsx" }],
+  "dependencies": ["lucide-react@1.21.0"],
+  "devDependencies": [],
+  "requires": ["button", "card"],
+  "docs": { "route": "/docs/blocks/app-error-state", "examples": ["sync-failed"] },
+  "stability": "stable"
+}
+

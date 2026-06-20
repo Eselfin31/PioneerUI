@@ -1,0 +1,14 @@
+{
+  "name": "empty-state",
+  "version": "0.1.0",
+  "kind": "block",
+  "title": "Empty State",
+  "description": "Composed empty state with icon, copy, and primary action.",
+  "files": [{ "role": "block", "source": "blocks/empty-state.tsx", "target": "src/components/blocks/empty-state.tsx" }],
+  "dependencies": ["lucide-react@1.21.0"],
+  "devDependencies": [],
+  "requires": ["button", "card"],
+  "docs": { "route": "/docs/blocks/empty-state", "examples": ["reports"] },
+  "stability": "stable"
+}
+

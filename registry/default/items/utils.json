@@ -1,0 +1,14 @@
+{
+  "name": "utils",
+  "version": "0.1.0",
+  "kind": "lib",
+  "title": "Utilities",
+  "description": "Class name merge helper used by Pioneer UI components.",
+  "files": [{ "role": "lib", "source": "lib/utils.ts", "target": "src/lib/utils.ts" }],
+  "dependencies": ["clsx@2.1.1", "tailwind-merge@3.6.0"],
+  "devDependencies": [],
+  "requires": [],
+  "docs": { "route": "/docs/lib/utils", "examples": ["cn"] },
+  "stability": "stable"
+}
+

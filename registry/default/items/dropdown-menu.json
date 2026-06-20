@@ -1,0 +1,14 @@
+{
+  "name": "dropdown-menu",
+  "version": "0.1.0",
+  "kind": "primitive",
+  "title": "Dropdown Menu",
+  "description": "Menu primitive for compact action lists.",
+  "files": [{ "role": "component", "source": "ui/dropdown-menu.tsx", "target": "src/components/ui/dropdown-menu.tsx" }],
+  "dependencies": ["@radix-ui/react-dropdown-menu@2.1.18"],
+  "devDependencies": [],
+  "requires": ["utils"],
+  "docs": { "route": "/docs/components/dropdown-menu", "examples": ["account-menu"] },
+  "stability": "candidate"
+}
+

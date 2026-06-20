@@ -1,0 +1,14 @@
+{
+  "name": "button",
+  "version": "0.1.0",
+  "kind": "primitive",
+  "title": "Button",
+  "description": "Action control with primary, secondary, ghost, destructive, and loading states.",
+  "files": [{ "role": "component", "source": "ui/button.tsx", "target": "src/components/ui/button.tsx" }],
+  "dependencies": ["class-variance-authority@0.7.1"],
+  "devDependencies": [],
+  "requires": ["utils"],
+  "docs": { "route": "/docs/components/button", "examples": ["primary", "secondary", "loading"] },
+  "stability": "stable"
+}
+

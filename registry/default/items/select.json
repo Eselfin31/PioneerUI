@@ -1,0 +1,14 @@
+{
+  "name": "select",
+  "version": "0.1.0",
+  "kind": "primitive",
+  "title": "Select",
+  "description": "Accessible select control for forms and filters.",
+  "files": [{ "role": "component", "source": "ui/select.tsx", "target": "src/components/ui/select.tsx" }],
+  "dependencies": ["@radix-ui/react-select@2.3.1", "lucide-react@1.21.0"],
+  "devDependencies": [],
+  "requires": ["utils"],
+  "docs": { "route": "/docs/components/select", "examples": ["workspace-selector"] },
+  "stability": "candidate"
+}
+

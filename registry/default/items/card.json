@@ -1,0 +1,14 @@
+{
+  "name": "card",
+  "version": "0.1.0",
+  "kind": "primitive",
+  "title": "Card",
+  "description": "Panel primitive for docs, settings, and application blocks.",
+  "files": [{ "role": "component", "source": "ui/card.tsx", "target": "src/components/ui/card.tsx" }],
+  "dependencies": [],
+  "devDependencies": [],
+  "requires": ["utils"],
+  "docs": { "route": "/docs/components/card", "examples": ["default", "metric"] },
+  "stability": "stable"
+}
+

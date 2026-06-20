@@ -1,0 +1,14 @@
+{
+  "name": "avatar",
+  "version": "0.1.0",
+  "kind": "primitive",
+  "title": "Avatar",
+  "description": "User avatar primitive with image and fallback slots.",
+  "files": [{ "role": "component", "source": "ui/avatar.tsx", "target": "src/components/ui/avatar.tsx" }],
+  "dependencies": ["@radix-ui/react-avatar@1.2.0"],
+  "devDependencies": [],
+  "requires": ["utils"],
+  "docs": { "route": "/docs/components/avatar", "examples": ["fallback", "image"] },
+  "stability": "stable"
+}
+

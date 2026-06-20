@@ -1,0 +1,43 @@
+{
+  "name": "pioneer-ui",
+  "version": "0.1.0",
+  "description": "Source-owned React component CLI for Pioneer UI.",
+  "type": "module",
+  "license": "Apache-2.0",
+  "homepage": "https://Eselfin31.github.io/PioneerUI/",
+  "bugs": {
+    "url": "https://github.com/Eselfin31/PioneerUI/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eselfin31/PioneerUI.git",
+    "directory": "packages/cli"
+  },
+  "bin": {
+    "pioneer": "./dist/index.mjs"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsdown src/index.ts --dts --format esm --banner.js \"#!/usr/bin/env node\"",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "@pioneer-ui/installer": "workspace:*",
+    "@pioneer-ui/registry": "workspace:*",
+    "@pioneer-ui/shared": "workspace:*",
+    "@pioneer-ui/tokens": "workspace:*"
+  },
+  "devDependencies": {
+    "tsdown": "0.22.3",
+    "typescript": "6.0.3"
+  }
+}

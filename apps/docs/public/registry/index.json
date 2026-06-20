@@ -1,0 +1,889 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-06-20T00:04:11.066Z",
+  "items": [
+    {
+      "name": "activity-feed",
+      "version": "0.1.0",
+      "kind": "block",
+      "title": "Activity Feed",
+      "description": "Compact event feed for dashboards and audit pages.",
+      "files": [
+        {
+          "role": "block",
+          "source": "blocks/activity-feed.tsx",
+          "target": "src/components/blocks/activity-feed.tsx"
+        }
+      ],
+      "dependencies": [],
+      "devDependencies": [],
+      "requires": [
+        "badge",
+        "card"
+      ],
+      "tokens": {},
+      "docs": {
+        "route": "/docs/blocks/activity-feed",
+        "examples": [
+          "release-activity"
+        ]
+      },
+      "stability": "stable"
+    },
+    {
+      "name": "app-error-state",
+      "version": "0.1.0",
+      "kind": "block",
+      "title": "App Error State",
+      "description": "Recoverable application error state with clear retry action.",
+      "files": [
+        {
+          "role": "block",
+          "source": "blocks/app-error-state.tsx",
+          "target": "src/components/blocks/app-error-state.tsx"
+        }
+      ],
+      "dependencies": [
+        "lucide-react@1.21.0"
+      ],
+      "devDependencies": [],
+      "requires": [
+        "button",
+        "card"
+      ],
+      "tokens": {},
+      "docs": {
+        "route": "/docs/blocks/app-error-state",
+        "examples": [
+          "sync-failed"
+        ]
+      },
+      "stability": "stable"
+    },
+    {
+      "name": "avatar",
+      "version": "0.1.0",
+      "kind": "primitive",
+      "title": "Avatar",
+      "description": "User avatar primitive with image and fallback slots.",
+      "files": [
+        {
+          "role": "component",
+          "source": "ui/avatar.tsx",
+          "target": "src/components/ui/avatar.tsx"
+        }
+      ],
+      "dependencies": [
+        "@radix-ui/react-avatar@1.2.0"
+      ],
+      "devDependencies": [],
+      "requires": [
+        "utils"
+      ],
+      "tokens": {},
+      "docs": {
+        "route": "/docs/components/avatar",
+        "examples": [
+          "fallback",
+          "image"
+        ]
+      },
+      "stability": "stable"
+    },
+    {
+      "name": "badge",
+      "version": "0.1.0",
+      "kind": "primitive",
+      "title": "Badge",
+      "description": "Compact status and metadata badge.",
+      "files": [
+        {
+          "role": "component",
+          "source": "ui/badge.tsx",
+          "target": "src/components/ui/badge.tsx"
+        }
+      ],
+      "dependencies": [],
+      "devDependencies": [],
+      "requires": [
+        "utils"
+      ],
+      "tokens": {},
+      "docs": {
+        "route": "/docs/components/badge",
+        "examples": [
+          "status-tones"
+        ]
+      },
+      "stability": "stable"
+    },
+    {
+      "name": "billing-page",
+      "version": "0.1.0",
+      "kind": "block",
+      "title": "Billing Page",
+      "description": "Billing summary with plan state, payment method, and invoice list.",
+      "files": [
+        {
+          "role": "block",
+          "source": "blocks/billing-page.tsx",
+          "target": "src/components/blocks/billing-page.tsx"
+        }
+      ],
+      "dependencies": [
+        "lucide-react@1.21.0"
+      ],
+      "devDependencies": [],
+      "requires": [
+        "badge",
+        "button",
+        "card"
+      ],
+      "tokens": {},
+      "docs": {
+        "route": "/docs/blocks/billing-page",
+        "examples": [
+          "subscription"
+        ]
+      },
+      "stability": "stable"
+    },
+    {
+      "name": "button",
+      "version": "0.1.0",
+      "kind": "primitive",
+      "title": "Button",
+      "description": "Action control with primary, secondary, ghost, destructive, and loading states.",
+      "files": [
+        {
+          "role": "component",
+          "source": "ui/button.tsx",
+          "target": "src/components/ui/button.tsx"
+        }
+      ],
+      "dependencies": [
+        "class-variance-authority@0.7.1"
+      ],
+      "devDependencies": [],
+      "requires": [
+        "utils"
+      ],
+      "tokens": {},
+      "docs": {
+        "route": "/docs/components/button",
+        "examples": [
+          "primary",
+          "secondary",
+          "loading"
+        ]
+      },
+      "stability": "stable"
+    },
+    {
+      "name": "card",
+      "version": "0.1.0",
+      "kind": "primitive",
+      "title": "Card",
+      "description": "Panel primitive for docs, settings, and application blocks.",
+      "files": [
+        {
+          "role": "component",
+          "source": "ui/card.tsx",
+          "target": "src/components/ui/card.tsx"
+        }
+      ],
+      "dependencies": [],
+      "devDependencies": [],
+      "requires": [
+        "utils"
+      ],
+      "tokens": {},
+      "docs": {
+        "route": "/docs/components/card",
+        "examples": [
+          "default",
+          "metric"
+        ]
+      },
+      "stability": "stable"
+    },
+    {
+      "name": "checkbox",
+      "version": "0.1.0",
+      "kind": "primitive",
+      "title": "Checkbox",
+      "description": "Accessible checkbox with Pioneer token states.",
+      "files": [
+        {
+          "role": "component",
+          "source": "ui/checkbox.tsx",
+          "target": "src/components/ui/checkbox.tsx"
+        }
+      ],
+      "dependencies": [
+        "@radix-ui/react-checkbox@1.3.5",
+        "lucide-react@1.21.0"
+      ],
+      "devDependencies": [],
+      "requires": [
+        "utils"
+      ],
+      "tokens": {},
+      "docs": {
+        "route": "/docs/components/checkbox",
+        "examples": [
+          "default",
+          "checked"
+        ]
+      },
+      "stability": "stable"
+    },
+    {
+      "name": "dashboard-shell",
+      "version": "0.1.0",
+      "kind": "block",
+      "title": "Dashboard Shell",
+      "description": "Flagship SaaS dashboard layout with sidebar, topbar actions, metrics, and readiness panel.",
+      "files": [
+        {
+          "role": "block",
+          "source": "blocks/dashboard-shell.tsx",
+          "target": "src/components/blocks/dashboard-shell.tsx"
+        }
+      ],
+      "dependencies": [
+        "lucide-react@1.21.0"
+      ],
+      "devDependencies": [],
+      "requires": [
+        "badge",
+        "button",
+        "card",
+        "separator"
+      ],
+      "tokens": {},
+      "docs": {
+        "route": "/docs/blocks/dashboard-shell",
+        "examples": [
+          "launch-operations"
+        ]
+      },
+      "stability": "stable"
+    },
+    {
+      "name": "data-table-page",
+      "version": "0.1.0",
+      "kind": "block",
+      "title": "Data Table Page",
+      "description": "Account table page with export action and compact status cells.",
+      "files": [
+        {
+          "role": "block",
+          "source": "blocks/data-table-page.tsx",
+          "target": "src/components/blocks/data-table-page.tsx"
+        }
+      ],
+      "dependencies": [],
+      "devDependencies": [],
+      "requires": [
+        "badge",
+        "button",
+        "card",
+        "table"
+      ],
+      "tokens": {},
+      "docs": {
+        "route": "/docs/blocks/data-table-page",
+        "examples": [
+          "accounts-table"
+        ]
+      },
+      "stability": "candidate"
+    },
+    {
+      "name": "dialog",
+      "version": "0.1.0",
+      "kind": "primitive",
+      "title": "Dialog",
+      "description": "Accessible modal dialog with overlay and close control.",
+      "files": [
+        {
+          "role": "component",
+          "source": "ui/dialog.tsx",
+          "target": "src/components/ui/dialog.tsx"
+        }
+      ],
+      "dependencies": [
+        "@radix-ui/react-dialog@1.1.17",
+        "lucide-react@1.21.0"
+      ],
+      "devDependencies": [],
+      "requires": [
+        "button",
+        "utils"
+      ],
+      "tokens": {},
+      "docs": {
+        "route": "/docs/components/dialog",
+        "examples": [
+          "confirmation",
+          "form"
+        ]
+      },
+      "stability": "candidate"
+    },
+    {
+      "name": "dropdown-menu",
+      "version": "0.1.0",
+      "kind": "primitive",
+      "title": "Dropdown Menu",
+      "description": "Menu primitive for compact action lists.",
+      "files": [
+        {
+          "role": "component",
+          "source": "ui/dropdown-menu.tsx",
+          "target": "src/components/ui/dropdown-menu.tsx"
+        }
+      ],
+      "dependencies": [
+        "@radix-ui/react-dropdown-menu@2.1.18"
+      ],
+      "devDependencies": [],
+      "requires": [
+        "utils"
+      ],
+      "tokens": {},
+      "docs": {
+        "route": "/docs/components/dropdown-menu",
+        "examples": [
+          "account-menu"
+        ]
+      },
+      "stability": "candidate"
+    },
+    {
+      "name": "empty-state",
+      "version": "0.1.0",
+      "kind": "block",
+      "title": "Empty State",
+      "description": "Composed empty state with icon, copy, and primary action.",
+      "files": [
+        {
+          "role": "block",
+          "source": "blocks/empty-state.tsx",
+          "target": "src/components/blocks/empty-state.tsx"
+        }
+      ],
+      "dependencies": [
+        "lucide-react@1.21.0"
+      ],
+      "devDependencies": [],
+      "requires": [
+        "button",
+        "card"
+      ],
+      "tokens": {},
+      "docs": {
+        "route": "/docs/blocks/empty-state",
+        "examples": [
+          "reports"
+        ]
+      },
+      "stability": "stable"
+    },
+    {
+      "name": "input",
+      "version": "0.1.0",
+      "kind": "primitive",
+      "title": "Input",
+      "description": "Text input styled with Pioneer UI tokens and accessible focus states.",
+      "files": [
+        {
+          "role": "component",
+          "source": "ui/input.tsx",
+          "target": "src/components/ui/input.tsx"
+        }
+      ],
+      "dependencies": [],
+      "devDependencies": [],
+      "requires": [
+        "utils"
+      ],
+      "tokens": {},
+      "docs": {
+        "route": "/docs/components/input",
+        "examples": [
+          "default",
+          "disabled",
+          "invalid"
+        ]
+      },
+      "stability": "stable"
+    },
+    {
+      "name": "label",
+      "version": "0.1.0",
+      "kind": "primitive",
+      "title": "Label",
+      "description": "Accessible form label primitive.",
+      "files": [
+        {
+          "role": "component",
+          "source": "ui/label.tsx",
+          "target": "src/components/ui/label.tsx"
+        }
+      ],
+      "dependencies": [
+        "@radix-ui/react-label@2.1.10"
+      ],
+      "devDependencies": [],
+      "requires": [
+        "utils"
+      ],
+      "tokens": {},
+      "docs": {
+        "route": "/docs/components/label",
+        "examples": [
+          "input-label"
+        ]
+      },
+      "stability": "stable"
+    },
+    {
+      "name": "notifications-page",
+      "version": "0.1.0",
+      "kind": "block",
+      "title": "Notifications Page",
+      "description": "Notification preference page for SaaS settings areas.",
+      "files": [
+        {
+          "role": "block",
+          "source": "blocks/notifications-page.tsx",
+          "target": "src/components/blocks/notifications-page.tsx"
+        }
+      ],
+      "dependencies": [],
+      "devDependencies": [],
+      "requires": [
+        "card",
+        "switch"
+      ],
+      "tokens": {},
+      "docs": {
+        "route": "/docs/blocks/notifications-page",
+        "examples": [
+          "preferences"
+        ]
+      },
+      "stability": "candidate"
+    },
+    {
+      "name": "onboarding-checklist",
+      "version": "0.1.0",
+      "kind": "block",
+      "title": "Onboarding Checklist",
+      "description": "Setup checklist block for product onboarding flows.",
+      "files": [
+        {
+          "role": "block",
+          "source": "blocks/onboarding-checklist.tsx",
+          "target": "src/components/blocks/onboarding-checklist.tsx"
+        }
+      ],
+      "dependencies": [],
+      "devDependencies": [],
+      "requires": [
+        "badge",
+        "button",
+        "card",
+        "checkbox"
+      ],
+      "tokens": {},
+      "docs": {
+        "route": "/docs/blocks/onboarding-checklist",
+        "examples": [
+          "setup"
+        ]
+      },
+      "stability": "stable"
+    },
+    {
+      "name": "profile-page",
+      "version": "0.1.0",
+      "kind": "block",
+      "title": "Profile Page",
+      "description": "Profile editing surface with avatar, inputs, and account metadata.",
+      "files": [
+        {
+          "role": "block",
+          "source": "blocks/profile-page.tsx",
+          "target": "src/components/blocks/profile-page.tsx"
+        }
+      ],
+      "dependencies": [],
+      "devDependencies": [],
+      "requires": [
+        "avatar",
+        "button",
+        "card",
+        "input",
+        "label"
+      ],
+      "tokens": {},
+      "docs": {
+        "route": "/docs/blocks/profile-page",
+        "examples": [
+          "profile-form"
+        ]
+      },
+      "stability": "stable"
+    },
+    {
+      "name": "security-page",
+      "version": "0.1.0",
+      "kind": "block",
+      "title": "Security Page",
+      "description": "Security controls page with policy toggle and audit log action.",
+      "files": [
+        {
+          "role": "block",
+          "source": "blocks/security-page.tsx",
+          "target": "src/components/blocks/security-page.tsx"
+        }
+      ],
+      "dependencies": [],
+      "devDependencies": [],
+      "requires": [
+        "badge",
+        "button",
+        "card",
+        "switch"
+      ],
+      "tokens": {},
+      "docs": {
+        "route": "/docs/blocks/security-page",
+        "examples": [
+          "controls"
+        ]
+      },
+      "stability": "candidate"
+    },
+    {
+      "name": "select",
+      "version": "0.1.0",
+      "kind": "primitive",
+      "title": "Select",
+      "description": "Accessible select control for forms and filters.",
+      "files": [
+        {
+          "role": "component",
+          "source": "ui/select.tsx",
+          "target": "src/components/ui/select.tsx"
+        }
+      ],
+      "dependencies": [
+        "@radix-ui/react-select@2.3.1",
+        "lucide-react@1.21.0"
+      ],
+      "devDependencies": [],
+      "requires": [
+        "utils"
+      ],
+      "tokens": {},
+      "docs": {
+        "route": "/docs/components/select",
+        "examples": [
+          "workspace-selector"
+        ]
+      },
+      "stability": "candidate"
+    },
+    {
+      "name": "separator",
+      "version": "0.1.0",
+      "kind": "primitive",
+      "title": "Separator",
+      "description": "Subtle visual separator.",
+      "files": [
+        {
+          "role": "component",
+          "source": "ui/separator.tsx",
+          "target": "src/components/ui/separator.tsx"
+        }
+      ],
+      "dependencies": [],
+      "devDependencies": [],
+      "requires": [
+        "utils"
+      ],
+      "tokens": {},
+      "docs": {
+        "route": "/docs/components/separator",
+        "examples": [
+          "section-divider"
+        ]
+      },
+      "stability": "stable"
+    },
+    {
+      "name": "settings-page",
+      "version": "0.1.0",
+      "kind": "block",
+      "title": "Settings Page",
+      "description": "Workspace settings form with switch controls and save action.",
+      "files": [
+        {
+          "role": "block",
+          "source": "blocks/settings-page.tsx",
+          "target": "src/components/blocks/settings-page.tsx"
+        }
+      ],
+      "dependencies": [],
+      "devDependencies": [],
+      "requires": [
+        "button",
+        "card",
+        "input",
+        "label",
+        "switch"
+      ],
+      "tokens": {},
+      "docs": {
+        "route": "/docs/blocks/settings-page",
+        "examples": [
+          "workspace-settings"
+        ]
+      },
+      "stability": "stable"
+    },
+    {
+      "name": "switch",
+      "version": "0.1.0",
+      "kind": "primitive",
+      "title": "Switch",
+      "description": "Accessible boolean toggle.",
+      "files": [
+        {
+          "role": "component",
+          "source": "ui/switch.tsx",
+          "target": "src/components/ui/switch.tsx"
+        }
+      ],
+      "dependencies": [
+        "@radix-ui/react-switch@1.3.1"
+      ],
+      "devDependencies": [],
+      "requires": [
+        "utils"
+      ],
+      "tokens": {},
+      "docs": {
+        "route": "/docs/components/switch",
+        "examples": [
+          "default",
+          "settings"
+        ]
+      },
+      "stability": "stable"
+    },
+    {
+      "name": "table",
+      "version": "0.1.0",
+      "kind": "primitive",
+      "title": "Table",
+      "description": "Data table parts for application lists.",
+      "files": [
+        {
+          "role": "component",
+          "source": "ui/table.tsx",
+          "target": "src/components/ui/table.tsx"
+        }
+      ],
+      "dependencies": [],
+      "devDependencies": [],
+      "requires": [
+        "utils"
+      ],
+      "tokens": {},
+      "docs": {
+        "route": "/docs/components/table",
+        "examples": [
+          "accounts"
+        ]
+      },
+      "stability": "candidate"
+    },
+    {
+      "name": "tabs",
+      "version": "0.1.0",
+      "kind": "primitive",
+      "title": "Tabs",
+      "description": "Segmented content navigation.",
+      "files": [
+        {
+          "role": "component",
+          "source": "ui/tabs.tsx",
+          "target": "src/components/ui/tabs.tsx"
+        }
+      ],
+      "dependencies": [
+        "@radix-ui/react-tabs@1.1.15"
+      ],
+      "devDependencies": [],
+      "requires": [
+        "utils"
+      ],
+      "tokens": {},
+      "docs": {
+        "route": "/docs/components/tabs",
+        "examples": [
+          "settings-tabs"
+        ]
+      },
+      "stability": "stable"
+    },
+    {
+      "name": "team-members-page",
+      "version": "0.1.0",
+      "kind": "block",
+      "title": "Team Members Page",
+      "description": "Team access list with member roles, avatars, and invite action.",
+      "files": [
+        {
+          "role": "block",
+          "source": "blocks/team-members-page.tsx",
+          "target": "src/components/blocks/team-members-page.tsx"
+        }
+      ],
+      "dependencies": [],
+      "devDependencies": [],
+      "requires": [
+        "avatar",
+        "badge",
+        "button",
+        "card"
+      ],
+      "tokens": {},
+      "docs": {
+        "route": "/docs/blocks/team-members-page",
+        "examples": [
+          "access-list"
+        ]
+      },
+      "stability": "stable"
+    },
+    {
+      "name": "textarea",
+      "version": "0.1.0",
+      "kind": "primitive",
+      "title": "Textarea",
+      "description": "Multiline field with matching form rhythm.",
+      "files": [
+        {
+          "role": "component",
+          "source": "ui/textarea.tsx",
+          "target": "src/components/ui/textarea.tsx"
+        }
+      ],
+      "dependencies": [],
+      "devDependencies": [],
+      "requires": [
+        "utils"
+      ],
+      "tokens": {},
+      "docs": {
+        "route": "/docs/components/textarea",
+        "examples": [
+          "default",
+          "helper"
+        ]
+      },
+      "stability": "stable"
+    },
+    {
+      "name": "toast",
+      "version": "0.1.0",
+      "kind": "primitive",
+      "title": "Toast",
+      "description": "Inline notification surface for app feedback.",
+      "files": [
+        {
+          "role": "component",
+          "source": "ui/toast.tsx",
+          "target": "src/components/ui/toast.tsx"
+        }
+      ],
+      "dependencies": [],
+      "devDependencies": [],
+      "requires": [
+        "utils"
+      ],
+      "tokens": {},
+      "docs": {
+        "route": "/docs/components/toast",
+        "examples": [
+          "success",
+          "error"
+        ]
+      },
+      "stability": "candidate"
+    },
+    {
+      "name": "tooltip",
+      "version": "0.1.0",
+      "kind": "primitive",
+      "title": "Tooltip",
+      "description": "Accessible tooltip with restrained Pioneer surface.",
+      "files": [
+        {
+          "role": "component",
+          "source": "ui/tooltip.tsx",
+          "target": "src/components/ui/tooltip.tsx"
+        }
+      ],
+      "dependencies": [
+        "@radix-ui/react-tooltip@1.2.10"
+      ],
+      "devDependencies": [],
+      "requires": [
+        "utils"
+      ],
+      "tokens": {},
+      "docs": {
+        "route": "/docs/components/tooltip",
+        "examples": [
+          "icon-tooltip"
+        ]
+      },
+      "stability": "stable"
+    },
+    {
+      "name": "utils",
+      "version": "0.1.0",
+      "kind": "lib",
+      "title": "Utilities",
+      "description": "Class name merge helper used by Pioneer UI components.",
+      "files": [
+        {
+          "role": "lib",
+          "source": "lib/utils.ts",
+          "target": "src/lib/utils.ts"
+        }
+      ],
+      "dependencies": [
+        "clsx@2.1.1",
+        "tailwind-merge@3.6.0"
+      ],
+      "devDependencies": [],
+      "requires": [],
+      "tokens": {},
+      "docs": {
+        "route": "/docs/lib/utils",
+        "examples": [
+          "cn"
+        ]
+      },
+      "stability": "stable"
+    }
+  ]
+}

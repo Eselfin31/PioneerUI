@@ -1,0 +1,14 @@
+{
+  "name": "table",
+  "version": "0.1.0",
+  "kind": "primitive",
+  "title": "Table",
+  "description": "Data table parts for application lists.",
+  "files": [{ "role": "component", "source": "ui/table.tsx", "target": "src/components/ui/table.tsx" }],
+  "dependencies": [],
+  "devDependencies": [],
+  "requires": ["utils"],
+  "docs": { "route": "/docs/components/table", "examples": ["accounts"] },
+  "stability": "candidate"
+}
+

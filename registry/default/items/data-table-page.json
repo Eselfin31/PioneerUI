@@ -1,0 +1,14 @@
+{
+  "name": "data-table-page",
+  "version": "0.1.0",
+  "kind": "block",
+  "title": "Data Table Page",
+  "description": "Account table page with export action and compact status cells.",
+  "files": [{ "role": "block", "source": "blocks/data-table-page.tsx", "target": "src/components/blocks/data-table-page.tsx" }],
+  "dependencies": [],
+  "devDependencies": [],
+  "requires": ["badge", "button", "card", "table"],
+  "docs": { "route": "/docs/blocks/data-table-page", "examples": ["accounts-table"] },
+  "stability": "candidate"
+}
+

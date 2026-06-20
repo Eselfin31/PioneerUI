@@ -1,0 +1,37 @@
+{
+  "name": "@pioneer-ui/tokens",
+  "version": "0.1.0",
+  "description": "CSS variable tokens for Pioneer UI React and Tailwind projects.",
+  "type": "module",
+  "license": "Apache-2.0",
+  "homepage": "https://Eselfin31.github.io/PioneerUI/",
+  "bugs": {
+    "url": "https://github.com/Eselfin31/PioneerUI/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eselfin31/PioneerUI.git",
+    "directory": "packages/tokens"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsdown src/index.ts --dts",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "devDependencies": {
+    "tsdown": "0.22.3",
+    "typescript": "6.0.3"
+  }
+}
